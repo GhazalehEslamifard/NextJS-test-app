@@ -1,7 +1,11 @@
+import { observer } from "mobx-react-lite";
+
+import HomeComponent from "../components/home-page";
+
 import type { NextPage } from "next";
 
-const Home: NextPage = () => {
-  return <div>test</div>;
+const HomePage: NextPage = function (): React.ReactElement {
+  return <HomeComponent />;
 };
 
-export default Home;
+export default observer(HomePage);
