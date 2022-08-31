@@ -1,4 +1,4 @@
-import { Instance, types } from "mobx-state-tree";
+import { types } from "mobx-state-tree";
 import * as uuid from "uuid";
 
 export const Task = types
@@ -15,5 +15,3 @@ export const Task = types
       self.description = description;
     },
   }));
-
-export type TaskType = Instance<typeof Task>;

@@ -83,6 +83,7 @@
     "no-useless-call": "error",
     "no-useless-catch": "error",
     "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
     "prettier/prettier": "error"
   }
 }

@@ -1,9 +1,10 @@
-import { destroy, Instance, types } from "mobx-state-tree";
+import { destroy, types } from "mobx-state-tree";
 import { useContext, createContext } from "react";
 
 import { taskList } from "../mock-data/mockData";
+import { TaskType, StoreType } from "../types";
 
-import { Task, TaskType } from "./task";
+import { Task } from "./task";
 
 export enum Filter {
   All = "ALL",
@@ -45,8 +46,6 @@ export const Store = types
       }
     },
   }));
-
-export type StoreType = Instance<typeof Store>;
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 export const StoreContext = createContext<StoreType>(null!);
