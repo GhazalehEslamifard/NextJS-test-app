@@ -1,4 +1,5 @@
 import { observer } from "mobx-react-lite";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useCallback, useEffect } from "react";
@@ -63,6 +64,10 @@ function HomeComponent(): React.ReactElement {
 
   return (
     <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>Task List</title>
+      </Head>
       <ActionsWrapper>
         <Link href="/create-task">create a task</Link>
         <FilterButton onClick={filterTasks} filter={store.filter}>

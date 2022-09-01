@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 
-import { theme } from "../../styles/theme";
 import { Filter } from "../../types";
 
 export const List = styled.ul`
@@ -49,7 +48,7 @@ export const DeleteButton = styled(Button)`
 
 export const FilterButton = styled(Button)<{ filter: Filter }>`
   width: 128px;
-  background: ${({ filter }) =>
+  background: ${({ filter, theme }) =>
     filter === Filter.All
       ? theme.button.filter.all
       : theme.button.filter.important};
